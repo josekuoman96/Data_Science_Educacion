@@ -1,0 +1,11 @@
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Archivos de más de 100 MB (GitHub no los acepta); quedan solo en local
+6-Procesamiento_y_redes_recurrentes-Parte_I/cnn_*.npy
+6-Procesamiento_y_redes_recurrentes-Parte_I/cnn_ark2.keras
+6-Procesamiento_y_redes_recurrentes-Parte_I/train.csv
