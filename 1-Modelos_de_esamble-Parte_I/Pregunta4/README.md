@@ -14,4 +14,4 @@ Define la función `bagging_het`, que genera **T muestras bootstrap**, entrena e
 
 ---
 
-[← Volver al índice](README.md)
+[← Volver al índice](../README.md)

@@ -25,4 +25,4 @@ Las empresas de telefonía compiten fuertemente por sus clientes, y retener a un
 
 ---
 
-[← Volver al índice](README.md)
+[← Volver al índice](../README.md)

@@ -17,4 +17,4 @@ Mostrar por qué **Random Forest es más estable y sufre menos overfitting** que
 
 ---
 
-[← Volver al índice](README.md)
+[← Volver al índice](../README.md)

@@ -17,4 +17,4 @@ Entender cómo funciona el ensamble **Bagging**: cómo mejora al aumentar el nú
 
 ---
 
-[← Volver al índice](README.md)
+[← Volver al índice](../README.md)

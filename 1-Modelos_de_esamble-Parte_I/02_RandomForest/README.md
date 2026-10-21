@@ -18,4 +18,4 @@ Aplicar **Random Forest** a un problema de clasificación desbalanceado (predeci
 
 ---
 
-[← Volver al índice](README.md)
+[← Volver al índice](../README.md)

@@ -17,4 +17,4 @@ Aprender a evaluar un clasificador con la **curva ROC** y el **AUC**, y a usar l
 
 ---
 
-[← Volver al índice](README.md)
+[← Volver al índice](../README.md)

@@ -18,4 +18,4 @@ Clase introductoria sobre métricas de regresión (R², MSE, MAE) y modelos de e
 
 ---
 
-[← Volver al índice](README.md)
+[← Volver al índice](../README.md)

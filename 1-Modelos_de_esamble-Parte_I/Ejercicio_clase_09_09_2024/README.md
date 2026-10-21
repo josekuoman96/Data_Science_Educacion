@@ -18,4 +18,4 @@ Comparar un **árbol de decisión**, **Bagging** y **Random Forest** para predec
 
 ---
 
-[← Volver al índice](README.md)
+[← Volver al índice](../README.md)
