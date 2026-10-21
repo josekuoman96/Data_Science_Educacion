@@ -1,37 +1,35 @@
-# Desafío 1 – Detección temprana de renuncias en empresas de telecomunicaciones
+# Modelos de ensamble – Parte I
 
 **Autor:** José Ignacio Kuoman Jiménez · **Generación:** G83
-**Módulo:** Modelos de ensamble (Parte I)
 
-## Objetivo
+Esta carpeta reúne los notebooks del módulo *Modelos de ensamble (Parte I)*: árboles de decisión, **Bagging**, **Random Forest**, ajuste de hiperparámetros, balanceo con SMOTE y evaluación con curva ROC/AUC..
 
-Las empresas de telefonía compiten fuertemente por sus clientes, y retener a uno antiguo cuesta menos que conseguir uno nuevo. El objetivo de este desafío es **entrenar modelos de ensamble capaces de predecir de forma temprana si un cliente renunciará a la compañía (churn)** y **explicar qué características influyen más** en que un cliente se vaya o se quede.
+## Índice
 
-## Datos
+Cada notebook tiene su propio README con el objetivo y una explicación breve del código:
 
-Se usa `telecom_churn.csv`, con información de clientes como semanas con la cuenta activa, renovación de contrato, plan y uso de datos, llamadas al servicio al cliente, minutos diurnos, factura mensual, cargos por exceso y minutos de roaming. La variable objetivo es `Churn` (1 = canceló el servicio, 0 = no).
+| Notebook | README |
+|---|---|
+| 1. Desafío 1 – Detección temprana de renuncias en empresas de telecomunicaciones | [README_Desafio1_Deteccion_de_renuncias.md](README_Desafio1_Deteccion_de_renuncias.md) |
+| 2. 02 - Bagging | [README_02_Bagging.md](README_02_Bagging.md) |
+| 3. 02 - RandomForest | [README_02_RandomForest.md](README_02_RandomForest.md) |
+| 4. Ejercicio clase - Modelos de ensamble (Parte I) - 09_09_2024 | [README_Ejercicio_clase_09_09_2024.md](README_Ejercicio_clase_09_09_2024.md) |
+| 5. Random_Forest-11_09_2024 | [README_Random_Forest_11_09_2024.md](README_Random_Forest_11_09_2024.md) |
+| 6. Evaluación del AUC y la curva ROC | [README_Evaluacion_AUC_curva_ROC.md](README_Evaluacion_AUC_curva_ROC.md) |
+| 7. g73_2024-07-08_clase | [README_g73_2024-07-08_clase.md](README_g73_2024-07-08_clase.md) |
+| 8. Pregunta4 | [README_Pregunta4.md](README_Pregunta4.md) |
 
-## Qué hace el código
+## Otros archivos
 
-1. **Análisis exploratorio:** distribución de cada variable, detección de outliers con boxplots (IQR) y un heatmap de correlaciones.
-2. **Árbol de decisión:** un modelo base sin ajustar y luego uno optimizado con `GridSearchCV` (5-fold) sobre `max_depth` y `min_samples_split` para reducir el overfitting.
-3. **SMOTE + Bagging:** balancea las clases del conjunto de entrenamiento y entrena un `BaggingClassifier` con 200 árboles.
-4. **Bagging heterogéneo:** combina Regresión Logística, Árbol de decisión y SVM (kernels `rbf` y `sigmoid`) con 200 muestras bootstrap y repite el modelo con mejor F1-score (usa `util_bagging.py`).
-5. **Random Forest (45 árboles):** estima el accuracy con la muestra OOB y muestra las 4 variables más importantes.
-6. **Random Forest optimizado:** búsqueda de grilla sobre `n_estimators` (50–190) y `max_features`, con evaluación OOB, curva ROC y AUC.
-7. **Clientes en riesgo:** con el mejor Random Forest, lista los 15 clientes con mayor probabilidad de renunciar.
-
-## Principales conclusiones
-
-- Las variables con más peso para predecir la renuncia son **DayMins, MonthlyCharge, CustServCalls y OverageFee**.
-- El Random Forest ajustado obtiene un **AUC superior a 0.9**, por lo que es el modelo más adecuado para detectar clientes en riesgo de irse.
-
-## Archivos
-
-- `Desafio1-Deteccion_temprana_de_renuncias_en_empresas_de_telecomunicaciones-Jose_Kuoman_Jimenez.ipynb` y `Desafio_1-...ipynb`: dos versiones del notebook del desafío.
-- `telecom_churn.csv`: datos de entrada.
-- `util_bagging.py`: función auxiliar `bagging_het` para el bagging heterogéneo.
+| Archivo | Uso |
+|---|---|
+| `telecom_churn.csv` | Desafío 1 |
+| `insurance.csv` | 02 - Bagging |
+| `ObesityDataSet.csv` | 02 - Bagging (bagging heterogéneo) |
+| `diabetes_prediction_dataset.csv` | 02 - RandomForest |
+| `boston.csv` | Ejercicio clase 09/09/2024 y clase g73 |
+| `util_bagging.py` | Función `bagging_het` para Bagging heterogéneo |
 
 ## Requisitos
 
-`numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `imbalanced-learn`
+`numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `imbalanced-learn`, `scipy`, `ucimlrepo`
